@@ -10,7 +10,8 @@ actor {
   };
 }
 
-A2: actor {
+A2: The code is trying to reassign to an immutable variable.
+actor {
   var counter : Nat = 0;
   public func increment_counter() : async () {
     counter := counter + 1;
@@ -31,10 +32,11 @@ actor {
   };
 }
 
-A3: actor {
+A3: Cannot assign a Nat to a var type Text.
+actor {
   var message : Text = "";
 
-  public func change_message(new_message : Text) : async () {
+  public query func change_message(new_message : Text) : async () {
     message := new_message;
     return;
   };
