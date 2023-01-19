@@ -8,7 +8,7 @@ A2: pae4o-o6dxf-xki7q-ezclx-znyd6-fnk6w-vkv5z-5lfwh-xym2i-otrrw-fqe; 16
 
 Q3: I have a neuron with 1O ICPs locked with a dissolve delay of 4 years - my neuron has been locked for 2 years. What is my expected voting power?
 
-A3:
+A3: 16.86
 
 Q4: What is wrong with the following code?
 actor {
@@ -21,13 +21,13 @@ actor {
  
 }
 
-A4: 
+A4: The return value for the toText function needed to be formatted as return(type.toText(value));
 actor {
   let n : Nat = 50;
   let t : Text = "Hello";
 
   public func convert_to_text(m : Nat) : async Text {
-    Nat.toText(m);
+    return(Nat.toText(m));
   };
  
 }
@@ -42,9 +42,9 @@ actor {
  
 }
 
-A5: 
+A5: Applying a variable type as in [var Text] requires [var ""] in the value.
 actor {
-  var languages : [var Text] = ["English", "German", "Chinese", "Japanese", "French"];
+  var languages : [var Text] = [var "English", "German", "Chinese", "Japanese", "French"];
 
   public func show_languages(language : Text) : async [var Text] {
     return (languages);
@@ -64,12 +64,3 @@ actor {
 }
 
 A6: 
-actor {
-  var languages : [Text] = ["English", "German", "Chinese", "Japanese", "French"];
-
-  public func add_language(new_language: Text) : async [Text] {
-    languages := Array.append<Text>(languages, [new_language]);
-    return (languages);
-  };
- 
-}
