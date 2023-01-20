@@ -32,7 +32,7 @@ actor{
 
 //Write a function factorial that takes a natural number n and returns the factorial of n.
 //factorial(n : Nat) ->  async Nat
-/*  public query func factorial(n : Nat): async Nat {
+  public query func factorial(n : Nat): async Nat {
       var sum: Nat = n;
       var cursor: Nat = n - 1;
       while(cursor > 1) {
@@ -41,7 +41,7 @@ actor{
 
       };
       return sum;
-  };*/
+  };
 
 //Write a function number_of_words that takes a sentence and returns the number of words in the sentence.
 //number_of_words(t : Text) -> async Nat 
